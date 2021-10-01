@@ -12,6 +12,6 @@ namespace Assignment4.Entities
         [EmailAddress]
         [Required]
         public string Email { get; set; }
-        public IEnumerable<Task> Tasks { get; set; }
+        public ICollection<Task> Tasks { get; set; }
     }
 }

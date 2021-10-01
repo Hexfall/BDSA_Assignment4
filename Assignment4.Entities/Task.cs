@@ -14,6 +14,6 @@ namespace Assignment4.Entities
         public string Description { get; set; }
         [Required]
         public Core.State State { get; set; }
-        public IEnumerable<Tag> Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; }
     }
 }
