@@ -11,6 +11,6 @@ namespace Assignment4.Entities
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
-        public IEnumerable<Task> Tasks { get; set; }
+        public ICollection<Task> Tasks { get; set; }
     }
 }
