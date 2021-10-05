@@ -27,12 +27,12 @@ namespace Assignment4.Entities
     {
         public KanbanContext CreateDbContext(string[] args)
         {
-            var configuration = new ConfigurationBuilder()
+            /*var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddUserSecrets<Program>()
                 .AddJsonFile("appsettings.json")
                 .Build();
-
+            */
             string server = "hattie.db.elephantsql.com",
                    db = "wsqawkcj",
                    user = "wsqawkcj",
