@@ -33,10 +33,16 @@ namespace Assignment4.Entities
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var connectionString = "User ID=root;Password=Password123;Server=localhost:5433;Database=Kanban;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0;";
+            string server = "hattie.db.elephantsql.com",
+                   db = "wsqawkcj",
+                   user = "wsqawkcj",
+                   pass = "lql13AjDvehThpybQXCNw5LnxpC7Oq-T";
+            int port = 5432;
+            var connectionString = string.Format("Server={0};Database={1};User Id={2};Password={3};Port={4}",
+                server, db, user, pass, port);
 
             var optionsBuilder = new DbContextOptionsBuilder<KanbanContext>()
-                .UseSqlServer(connectionString);
+                .UseNpgsql(connectionString);
 
             return new KanbanContext(optionsBuilder.Options);
         }
