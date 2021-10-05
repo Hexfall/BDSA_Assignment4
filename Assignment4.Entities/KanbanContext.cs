@@ -33,7 +33,7 @@ namespace Assignment4.Entities
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var connectionString = "User ID=root;Password=Banani21;Server=localhost:5433;Database=Kanban;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0;";
+            var connectionString = "User ID=root;Password=Password123;Server=localhost:5433;Database=Kanban;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0;";
 
             var optionsBuilder = new DbContextOptionsBuilder<KanbanContext>()
                 .UseSqlServer(connectionString);
